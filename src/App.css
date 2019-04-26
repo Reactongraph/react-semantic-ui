@@ -1,0 +1,38 @@
+.ui.inverted.segment, .ui.primary.inverted.segment {
+  background: url(https://stage.bmw-sanghiclassic.in/sites/default/files/styles/nostyle/public/slider_banner_image/2018-02/M3Sedan-header_Banner_12.jpg?itok=ppuyOzcC) no-repeat;
+}
+/* .ui.grid>[class*="center aligned"].row>.column {
+  text-align: justify;
+} */
+
+  .margin_top {
+    margin-top: 5%;
+  }
+  .Login_height { min-height: 630px; }
+  .ui.inverted.segment.Login_height > div > div {
+    width: 50%;
+    float: left;
+    background: rgba(0, 0, 0, .4);
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.ui.button, .ui.buttons .button, .ui.buttons .or {
+  margin: 0 1rem;
+}
+.submit_btn { border-radius: 22px !important; }
+
+.error { color: #ff4a55; margin: 10px 0px; }
+
+.disable { opacity: 1 !important; cursor: not-allowed; }
+
+.ui.input > input {
+  background: rgba(104, 109, 112, 0.2);
+}
+/* .ui.input.focus>input, .ui.input>input:focus {
+ 
+  background: rgba(104, 109, 112, 0.2);
+} */
+.signup_label { color: white !important; }
+  @media (max-width: 700px) {
+    .Login_height { min-height: 760px; }
+  }
