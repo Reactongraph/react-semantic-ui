@@ -9,14 +9,15 @@ import {
 	Sidebar,
 } from 'semantic-ui-react'
 import PropTypes from 'prop-types'
-import HomepageHeading from "./homepageHeading";
+import HomepageHeading from "../components/homepageHeading";
 
-export default class MobileContainer extends React.Component {
+export default class MobileLayout extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {}
 	}
 
+	// For mobile menu bar
 	handleSidebarHide = () => this.setState({ sidebarOpened: false })
 
 	handleToggle = () => this.setState({ sidebarOpened: true })
@@ -32,7 +33,7 @@ export default class MobileContainer extends React.Component {
 	render() {
 		const { children } = this.props
 		const { sidebarOpened } = this.state
-
+		const LIST = ["Home", "Work", "Company", "Careers"]
 		return (
 			<Responsive
 				as={Sidebar.Pushable}
@@ -47,14 +48,7 @@ export default class MobileContainer extends React.Component {
 					vertical
 					visible={sidebarOpened}
 				>
-					<Menu.Item as='a' active>
-						Home
-            </Menu.Item>
-					<Menu.Item as='a'>Work</Menu.Item>
-					<Menu.Item as='a'>Company</Menu.Item>
-					<Menu.Item as='a'>Careers</Menu.Item>
-					<Menu.Item as='a'>Log in</Menu.Item>
-					<Menu.Item as='a'>Sign Up</Menu.Item>
+					{LIST.map((item, i) => <Menu.Item as='a' active={item === "Home"}>{item}</Menu.Item>)}
 				</Sidebar>
 
 				<Sidebar.Pusher dimmed={sidebarOpened}>
@@ -84,6 +78,6 @@ export default class MobileContainer extends React.Component {
 	}
 }
 
-MobileContainer.propTypes = {
+MobileLayout.propTypes = {
 	children: PropTypes.node,
 }

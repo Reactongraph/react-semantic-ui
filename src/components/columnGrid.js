@@ -7,9 +7,9 @@ import PropTypes from 'prop-types'
 
 const ColumnGrid = (props) => {
 	return (
-		<Grid.Column style={{ paddingBottom: '5em', paddingTop: '5em' }}>
+		<Grid.Column>
 			<Header as='h3' style={{ fontSize: '2em' }} content={props.heading} />
-			<p style={{ fontSize: '1.33em' }}>{props.para}</p>
+			<p style={{ fontSize: '1.33em' }} className={props.paraClass}>{props.para}</p>
 		</Grid.Column>
 	)
 }

@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import App from './App'
-import Login from './components/login'
-import Signup from './components/signup';
+import Login from './containers/login'
+import Signup from './containers/signup';
 
 const history = require("history").createBrowserHistory
 

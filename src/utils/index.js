@@ -10,6 +10,18 @@ export function isValidSignup(data) {
   }
 }
 
+export function isValidLogin(data) {
+  if (data.email === "" || data.password === "") {
+    return {
+      status: false,
+      message: "Complete all required fields"
+    }
+  }
+  else {
+    return { status: true, message: null }
+  }
+}
+
 export function isValidEmail(email) {
   var emailReg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return emailReg.test(String(email).toLowerCase());

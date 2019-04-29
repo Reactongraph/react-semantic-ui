@@ -9,6 +9,7 @@
     margin-top: 5%;
   }
   .Login_height { min-height: 630px; }
+  .Login_page_height { min-height: 630px; }
   .ui.inverted.segment.Login_height > div > div {
     width: 50%;
     float: left;
@@ -21,18 +22,50 @@
 }
 .submit_btn { border-radius: 22px !important; }
 
-.error { color: #ff4a55; margin: 10px 0px; }
+.error { color: #ff4a55; margin: 10px 0px !important; }
 
 .disable { opacity: 1 !important; cursor: not-allowed; }
 
 .ui.input > input {
   background: rgba(104, 109, 112, 0.2);
 }
-/* .ui.input.focus>input, .ui.input>input:focus {
- 
-  background: rgba(104, 109, 112, 0.2);
-} */
+.ui.inverted.segment.Login_page_height > div > div {
+  width: 35%;
+  float: left;
+  background: rgba(0, 0, 0, .4);
+  border-radius: 10px;
+  margin-top: 10px;
+}
 .signup_label { color: white !important; }
+
+.ui.grid>[class*="two column"].row>.column.login_field { width: 100%!important; }
+
+.ui.input.login_input { width: 100%; }
+
+.login_label { color: white !important; margin-top: 15px !important; }
+
+.ui.button { margin: 1rem 1rem; }
+
+.para_paddng { padding: 0 3rem; text-align: justify; }
+
   @media (max-width: 700px) {
     .Login_height { min-height: 760px; }
+
+    .ui.inverted.segment.Login_height > div > div { width: 100%; margin: 0px; }
+
+    .ui.grid>[class*="two column"].row>.column { width: 100% !important; }
+
+    .ui.header:first-child { margin: 10px 0px 5px 0 !important; }
+
+    .two.column.row { padding: 10px 0 10px 0; }
+
+    .ui.inverted.segment.Login_page_height > div > div { width: 100%; }
+
+    .ui.vertical.segment { padding: 2em 0em !important; }
+
+    .para_paddng { padding: 0; }
+  }
+  
+  @media screen and (max-width: 1023px) and (min-width: 701px) {
+    .ui.inverted.segment.Login_height > div > div { width: 72%; }
   }
