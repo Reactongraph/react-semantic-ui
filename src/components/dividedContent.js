@@ -19,7 +19,7 @@ const DividedContent = () => {
 	return (
 		<Segment style={{ padding: '8em 0em' }} vertical>
 			<Container text>
-			<ColumnGrid heading={HEADING1} para={PARA1} />
+				<ColumnGrid heading={HEADING1} para={PARA1} />
 				<Button as='a' size='large'>
 					Read More
         </Button>
@@ -33,7 +33,7 @@ const DividedContent = () => {
 					<a href='#'>Case Studies</a>
 				</Divider>
 
-			<ColumnGrid heading={HEADING2} para={PARA2} />				
+				<ColumnGrid heading={HEADING2} para={PARA2} />
 				<Button as='a' size='large'>
 					I'm Still Quite Interested
         </Button>

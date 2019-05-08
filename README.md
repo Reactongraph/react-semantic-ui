@@ -1,6 +1,8 @@
 ### Semantic UI
 Semantic UI is a UI component framework for theming websites. Semantic UI enables developers to build websites with fast and concise HTML, along with a complete mobile responsive experience. Semantic UI treats words and classes as exchangeable concepts. Classes use syntax from natural languages like noun/modifier relationships, word order, and plurality to link concepts intuitively.
 
+Demo: https://react-semantic-ui.herokuapp.com/
+
 ### Install
 $ git clone https://github.com/Reactongraph/react-semantic-ui.git
 
