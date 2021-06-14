@@ -1,5 +1,13 @@
 .ui.inverted.segment, .ui.primary.inverted.segment {
-  background: url(https://stage.bmw-sanghiclassic.in/sites/default/files/styles/nostyle/public/slider_banner_image/2018-02/M3Sedan-header_Banner_12.jpg?itok=ppuyOzcC) no-repeat;
+  background: url(https://wallup.net/wp-content/uploads/2017/11/24/536231-car-Lamborghini_Huracan_LP_610-4-edit-black-748x421.jpg) no-repeat;
+  
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 /* .ui.grid>[class*="center aligned"].row>.column {
   text-align: justify;
