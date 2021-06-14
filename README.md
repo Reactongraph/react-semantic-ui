@@ -5,7 +5,7 @@ Semantic UI is a UI component framework for theming websites. Semantic UI enable
 
 This POC contains a simple React Application demo built using Semantic UI. It contains a Home Page, Login Page and a Sign Up Page.
 
-
+<img src='./src/assets/Home.png' alt='video' height='720' />
 ![ScreenShot](https://raw.github.com/Reactongraph/react-semantic-ui/master/src/assets/Home.png)
 
 ![ScreenShot](https://raw.github.com/Reactongraph/react-semantic-ui/master/src/assets/login.png)
