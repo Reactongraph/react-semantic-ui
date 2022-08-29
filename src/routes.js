@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import App from './App'
 import Login from './containers/login'
 import Signup from './containers/signup';
@@ -10,20 +10,11 @@ const ProjectRouter = () => (
   <Router
     history={history}
   >
-    <Switch>
-      <Route
-        exact path='/'
-        component={App}
-      />
-      <Route
-        exact path='/login'
-        component={Login}
-      />
-      <Route
-        exact path='/signup'
-        component={Signup}
-      />
-    </Switch>
+    <Routes>
+      <Route exact path='/' element={<App />} />
+      <Route exact path='/login' element={<Login />} />
+      <Route exact path='/signup' element={<Signup />} />
+    </Routes>
   </Router>
 )
 
