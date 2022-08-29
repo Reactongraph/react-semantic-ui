@@ -1,46 +1,45 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import {
 	Responsive,
 } from 'semantic-ui-react';
 import DesktopLayout from './desktopContainer'
 
-export default class Index extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {}
+const DesktopIndex =(props)=> {
+	const [state, setState] =useState({fixed:false})
+	const Navigate =useNavigate()
+	const hideFixedMenu = () => setState({ ...state,fixed: false })
+	const showFixedMenu = () => setState({ ...state,fixed: true })
+
+	const handleLogin = () => {
+		Navigate('/login')
 	}
 
-	hideFixedMenu = () => this.setState({ fixed: false })
-	showFixedMenu = () => this.setState({ fixed: true })
-
-	handleLogin = () => {
-		this.props.history.push('/login')
+	const handleSignup = () => {
+		Navigate('/signup')
 	}
 
-	handleSignup = () => {
-		this.props.history.push('/signup')
-	}
 
-	render() {
-		const { children } = this.props
-		const { fixed } = this.state
+		const { children } = props
+		const { fixed } = state
 		const LIST = ["Home", "Work", "Company", "Careers"]
 
 		return (
-			<Responsive getWidth={this.props.getWidth} minWidth={Responsive.onlyTablet.minWidth}>
+			<Responsive getWidth={props.getWidth} minWidth={Responsive.onlyTablet.minWidth}>
 				<DesktopLayout list={LIST}
-					hideFixedMenu={this.hideFixedMenu}
-					showFixedMenu={this.showFixedMenu}
-					handleLogin={this.handleLogin}
-					handleSignup={this.handleSignup}
+					hideFixedMenu={hideFixedMenu}
+					showFixedMenu={showFixedMenu}
+					handleLogin={handleLogin}
+					handleSignup={handleSignup}
 				/>
 				{children}
 			</Responsive>
 		)
-	}
+	
 }
 
-Index.propTypes = {
+DesktopIndex.propTypes = {
 	children: PropTypes.node,
 }
+export default DesktopIndex
